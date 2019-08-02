@@ -1,4 +1,4 @@
-from php:7.1
+from php:7.2
 RUN apt-get update
 RUN apt-get install git libpng-dev zip unzip -y
 RUN docker-php-ext-install gd
