@@ -6,4 +6,5 @@ RUN docker-php-ext-install zip
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
-RUN php composer.phar -n global require -n "hirak/prestissimo"
+RUN mv composer.phar /usr/local/bin/composer
+RUN /usr/local/bin/composer -n global require -n "hirak/prestissimo"
